@@ -353,5 +353,8 @@ client.user.setGame(`Dplay`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
+client.on('ready',async () => {
+  client.channels.find(ch => ch.id === "497582850984509441" && ch.type === 'voice').join();
+});
 
 client.login(process.env.BOT_TOKEN);
