@@ -354,7 +354,7 @@ client.user.setStatus("dnd")
 });
 
 client.on('ready',async () => {
-  client.channels.find(ch => ch.id === "497582850984509441" && ch.type === 'voice').join();
+  client.channels.find(ch => ch.id === "497529959078821900" && ch.type === 'voice').join();
 });
 
 client.login(process.env.BOT_TOKEN);
