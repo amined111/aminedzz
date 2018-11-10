@@ -121,7 +121,7 @@ client.on('message', async msg => {
                             color: 15158332,
                             fields: [{
                                 name: "❌ خطأ",
-                                value: 'تم ادخال قيمه غير صحيحه .. سيتم الغاء التشغيل
+                                value: 'انت لست في روم صوتي'
                               }
                             ]
                           }
