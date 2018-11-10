@@ -457,6 +457,6 @@ if (message.content.startsWith(prefix + 'setstream')) {
      console.log('test' + argresult);
     message.channel.sendMessage(`Streaming: **${argresult}`)
 }
-	});
+});
 
 client.login(process.env.BOT_TOKEN);
