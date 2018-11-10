@@ -136,14 +136,12 @@ client.on('message', async msg => {
                         fields: [{
                             name: "❌ خطأ",
                             value: 'لم استطيع العثور علي اغنيه بهذا الاسم '
+                              }
+                            ]
                           }
-                        ]
-                      }
+                        })
                     }
-                }
-            }
- 
-            return handleVideo(video, msg, voiceChannel);
+               return handleVideo(video, msg, voiceChannel);
         }
     } else if (msg.content.startsWith(`${prefix}skip`)) {
         console.log(`${msg.author.tag} has been used the ${prefix}skip command in ${msg.guild.name}`);
