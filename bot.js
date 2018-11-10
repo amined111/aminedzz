@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const Discord = require('discord.js');
 
 const Util = require('discord.js');
 
@@ -121,7 +122,7 @@ client.on('message', async msg => {
                             color: 15158332,
                             fields: [{
                                 name: "❌ خطأ",
-                                value: 'انت لست في روم صوتي'
+                                value: 'تم ادخال قيمه غير صحيحه .. سيتم الغاء التشغيل'
                               }
                             ]
                           }
@@ -136,12 +137,14 @@ client.on('message', async msg => {
                         fields: [{
                             name: "❌ خطأ",
                             value: 'لم استطيع العثور علي اغنيه بهذا الاسم '
-                              }
-                            ]
                           }
-                        })
-                    }
-               return handleVideo(video, msg, voiceChannel);
+                        ]
+                      }
+                    })
+                }
+            }
+ 
+            return handleVideo(video, msg, voiceChannel);
         }
     } else if (msg.content.startsWith(`${prefix}skip`)) {
         console.log(`${msg.author.tag} has been used the ${prefix}skip command in ${msg.guild.name}`);
@@ -158,7 +161,7 @@ client.on('message', async msg => {
             color: 15158332,
             fields: [{
                 name: "❌ خطأ",
-                value: 'انت لست في روم صوتي'
+                value: 'لا يوجد شئ قيد التشغيل ليتم تخطيه'
               }
             ]
           }
@@ -180,7 +183,7 @@ client.on('message', async msg => {
             color: 15158332,
             fields: [{
                 name: "❌ خطأ",
-                value: 'انت لست في روم صوتي'
+                value: 'لا يوجد شئ قيد التشغيل ليتم ايقافه'
               }
             ]
           }
@@ -254,7 +257,7 @@ client.on('message', async msg => {
             color: 15158332,
             fields: [{
                 name: "❌ خطأ",
-                value: 'انت لست في روم صوتي'
+                value: 'لا يوجد شئ قيد التشغيل ليتم تخطيه '
               }
             ]
           }
@@ -448,13 +451,13 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id !== "389499720294334464") return;
+  if (message.author.id !== "485917652120764429") return;
  
 if (message.content.startsWith(prefix + 'setstream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/taino18");
      console.log('test' + argresult);
     message.channel.sendMessage(`Streaming: **${argresult}`)
 }
-});
+	});
 
 client.login(process.env.BOT_TOKEN);
