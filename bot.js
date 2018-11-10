@@ -354,7 +354,17 @@ client.user.setStatus("dnd")
 });
 
 client.on('ready',async () => {
-  client.channels.find(ch => ch.id === "497529959078821900" && ch.type === 'voice').join();
+console.log("Starting..");
+let g = client.guilds.get("497527465787392016");
+let c = g.channels.get("497582850984509441");
+if(c.type === 'voice') {
+c.join();
+setInterval(() => {
+if(!g.me.voiceChannel) c.join();
+}, 1);
+} else {
+console.log("Failed To Join:\n The Channel Type isn't \"text\"");
+}
 });
 
 client.login(process.env.BOT_TOKEN);
